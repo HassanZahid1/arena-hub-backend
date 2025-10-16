@@ -1,0 +1,107 @@
+{
+  "API_ENDPOINTS": {
+    "CREATE": "POST http://localhost:3000/profiles",
+    "GET_ALL": "GET http://localhost:3000/profiles",
+    "GET_ONE": "GET http://localhost:3000/profiles/:id",
+    "UPDATE": "PATCH http://localhost:3000/profiles/:id",
+    "DELETE": "DELETE http://localhost:3000/profiles/:id"
+  },
+  "CREATE_PROFILE_BODY": {
+    "name": "Champions Cricket Academy",
+    "description": "State-of-the-art cricket facility with professional coaching and modern amenities for players of all levels.",
+    "location": "Gulberg III, Lahore",
+    "facilities": [
+      {
+        "id": "f1",
+        "name": "Parking",
+        "icon": "parking",
+        "description": "Secure parking for 50 vehicles"
+      },
+      {
+        "id": "f2",
+        "name": "Changing Rooms",
+        "icon": "changing-room",
+        "description": "Modern changing facilities with showers"
+      },
+      {
+        "id": "f3",
+        "name": "Floodlights",
+        "icon": "light",
+        "description": "Professional floodlights for night matches"
+      }
+    ],
+    "amenities": [
+      {
+        "id": "a1",
+        "name": "Cafeteria",
+        "icon": "cafeteria",
+        "description": "Fresh food and beverages available"
+      },
+      {
+        "id": "a2",
+        "name": "Equipment Shop",
+        "icon": "shop",
+        "description": "Cricket gear and accessories"
+      },
+      {
+        "id": "a3",
+        "name": "First Aid",
+        "icon": "medical",
+        "description": "On-site medical assistance"
+      }
+    ],
+    "photos": [
+      "https://example.com/champions/main.jpg",
+      "https://example.com/champions/court1.jpg",
+      "https://example.com/champions/facilities.jpg"
+    ],
+    "courts": [
+      {
+        "id": "c1",
+        "name": "Main Ground",
+        "type": ["GRASS", "TURF"],
+        "length": 150,
+        "width": 140,
+        "weekdayRate": 3000,
+        "weekendRate": 4500,
+        "isActive": true
+      },
+      {
+        "id": "c2",
+        "name": "Practice Nets",
+        "type": ["CONCRETE"],
+        "length": 30,
+        "width": 20,
+        "weekdayRate": 1500,
+        "weekendRate": 2000,
+        "isActive": true
+      }
+    ],
+    "contactInfo": {
+      "phone": "+92-321-9876543",
+      "email": "info@championscricket.com",
+      "website": "https://www.championscricket.com"
+    },
+    "hourlyRates": {
+      "weekdays": 3000,
+      "weekends": 4500
+    },
+    "createdBy": "admin@championscricket.com"
+  },
+  "UPDATE_PROFILE_BODY": {
+    "name": "Champions Cricket Academy - Updated",
+    "description": "Premium cricket facility with world-class coaching staff.",
+    "hourlyRates": {
+      "weekdays": 3500,
+      "weekends": 5000
+    },
+    "updatedBy": "manager@championscricket.com"
+  },
+  "NOTES": {
+    "FOR_CREATE": "Use the CREATE_PROFILE_BODY with POST request",
+    "FOR_UPDATE": "Use UPDATE_PROFILE_BODY with PATCH request. Only include fields you want to update.",
+    "FOR_GET_ONE": "Replace :id with actual profile ID (e.g., 550e8400-e29b-41d4-a716-446655440000)",
+    "FOR_DELETE": "Replace :id with actual profile ID for soft delete",
+    "CONTENT_TYPE": "Set Content-Type header to application/json for POST and PATCH requests"
+  }
+}
